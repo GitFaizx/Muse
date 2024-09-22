@@ -271,7 +271,7 @@ class HelpCog(commands.Cog, name="Help"):
             owner = self.bot.appinfo.owner
 
         embed.set_footer(icon_url=owner.display_avatar.replace(static_format="png").url,
-                         text=f"Owner: {owner} [{owner.id}]")
+                         text=f"{owner} [{owner.id}]")
 
         view = ViewHelp(ctx, btn_id, get_cmd=self.get_cmd, cmd_list=cmd_lst_new, category_cmd=None,
                  main_embed=embed, timeout=180)
